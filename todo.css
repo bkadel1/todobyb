@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("bgimage.png");
+    background-size: cover;
+    background-position: fixed;
+    font-size: 18px; /* Adjust base font size for better readability on smaller screens */
+}
+
+.container {
+    max-width: 800px; /* Adjust the maximum width for larger screens */
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to the sides for better readability on larger screens */
+}
+
+h1 {
+    font-size: 28px; /* Increase heading size for emphasis */
+    margin-top: 20px; /* Add some top margin for separation */
+}
+
+.task-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px; /* Increase input padding for easier touch interaction on mobile */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Increase button padding for easier click on mobile */
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0; /* Increase margin for better separation between list items */
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.element {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+div.scroll {
+    max-height: 200px; /* Increase max-height for better scrolling experience on smaller screens */
+    overflow: auto; /* Use auto to display scrollbars when necessary */
+}
+
+.myWrapper {
+    max-width: 90%; /* Adjust max-width to ensure responsiveness */
+    margin: 0 auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;   /* Height of the footer */
+    background: grey;
+}
+
+
+/* Adding a fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the task list items */
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.5s ease-in-out; /* Apply the animation */
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 16px; /* Further reduce font size for smaller screens */
+    }
+
+    .container {
+        padding: 0 10px; /* Adjust container padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce heading size for smaller screens */
+    }
+
+    input[type="text"],
+    button {
+        padding: 8px 16px; /* Slightly reduce input and button padding for smaller screens */
+    }
+}
