@@ -4,18 +4,20 @@ body {
     background-image: url("bgimage.png");
     background-size: cover;
     background-position: fixed;
-    font-size: 18px; /* Adjust base font size for better readability on smaller screens */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 18px; 
 }
 
 .container {
-    max-width: 800px; /* Adjust the maximum width for larger screens */
+    max-width: 800px; 
     margin: 0 auto;
-    padding: 0 20px; /* Add padding to the sides for better readability on larger screens */
+    padding: 0 20px; 
 }
 
 h1 {
-    font-size: 28px; /* Increase heading size for emphasis */
-    margin-top: 20px; /* Add some top margin for separation */
+    font-size: 28px; 
+    margin-top: 20px; 
 }
 
 .task-input {
@@ -25,14 +27,14 @@ h1 {
 
 input[type="text"] {
     flex-grow: 1;
-    padding: 10px; /* Increase input padding for easier touch interaction on mobile */
+    padding: 10px; 
 }
 
 button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px; /* Increase button padding for easier click on mobile */
+    padding: 10px 20px; 
     cursor: pointer;
 }
 
@@ -44,7 +46,7 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0; /* Increase margin for better separation between list items */
+    margin: 10px 0; 
     padding: 10px;
     border: 1px solid #ddd;
 }
@@ -60,12 +62,12 @@ li {
 }
 
 div.scroll {
-    max-height: 200px; /* Increase max-height for better scrolling experience on smaller screens */
-    overflow: auto; /* Use auto to display scrollbars when necessary */
+    max-height: 200px; 
+    overflow: auto; 
 }
 
 .myWrapper {
-    max-width: 90%; /* Adjust max-width to ensure responsiveness */
+    max-width: 90%; 
     margin: 0 auto;
 }
 
@@ -73,12 +75,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 30px;   /* Height of the footer */
+    height: 30px;   
     background: grey;
 }
 
-
-/* Adding a fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -88,31 +88,33 @@ footer {
     }
 }
 
-/* Apply the animation to the task list items */
+
 li {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ddd;
-    animation: fadeIn 0.5s ease-in-out; /* Apply the animation */
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 760px) {
+@media (max-width: 600px) {
     body {
-        font-size: 16px; /* Further reduce font size for smaller screens */
+        background-image: url('bgimage.png');
     }
-
     .container {
-        padding: 0 10px; /* Adjust container padding for smaller screens */
+        padding: 10px;
     }
 
     h1 {
-        font-size: 24px; /* Reduce heading size for smaller screens */
+        font-size: 24px;
     }
 
-    input[type="text"],
+    input[type="text"] {
+        font-size: 14px;
+    }
+
     button {
-        padding: 8px 16px; /* Slightly reduce input and button padding for smaller screens */
+        font-size: 14px;
     }
 }
